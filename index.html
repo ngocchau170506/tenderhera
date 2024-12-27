@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+*, *:after, *:before { 
+  box-sizing: border-box; 
+}
+body {
+	color: #fff;
+	font-weight: 100%;
+	font-size: 100%;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+.container div {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+}
+
+.container div img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.container div figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.container div figcaption::before,
+.container div figcaption::after {
+	pointer-events: none;
+}
+
+.container div figcaption,
+.container div figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+.container div figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.container div h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.container div h2 span {
+	font-weight: 800;
+}
+
+.container div h2,
+.container div p {
+	margin: 0;
+}
+
+.container div p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+div.effect {
+	background: #303fa9;
+}
+
+div.effect h2 {
+	font-size: 158.75%;
+}
+
+div.effect h2,
+div.effect p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: opacity 0.35s, transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+div.effect figcaption::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border: 2px solid #fff;
+	content: '';
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+div.effect p {
+	width: 100px;
+	text-transform: none;
+	font-size: 121%;
+	line-height: 2;
+}
+
+div.effect p a {
+	color: #fff;
+}
+
+div.effect p a:hover,
+div.effect p a:focus {
+	opacity: 0.6;
+}
+
+div.effect p a i {
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+div.effect p a:first-child i {
+	transform: translate3d(-60px,-60px,0);
+}
+
+div.effect p a:nth-child(2) i {
+	transform: translate3d(60px,-60px,0);
+}
+
+div.effect p a:nth-child(3) i {
+	transform: translate3d(-60px,60px,0);
+}
+
+div.effect p a:nth-child(4) i {
+	transform: translate3d(60px,60px,0);
+}
+
+div.effect:hover figcaption::before {
+	opacity: 1;
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+}
+
+div.effect:hover h2 {
+	opacity: 0;
+	transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+}
+
+div.effect:hover p i:empty {
+	transform: translate3d(0,0,0);
+	opacity: 1;
+}
+    </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+            <div class="container
+        ">
+                <div class="effect">
+                    <img src="https://tympanus.net/Development/HoverEffectIdeas/img/17.jpg" alt="anh"/>
+                    <figcaption>
+                        <h2>Tender <span>Hera</span></h2> 
+                    </figcaption>			
+                </div>
+            </div>
+</body>
+</html>
